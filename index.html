@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Github</title>
+  <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #222;
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    #title {
+        font-size: 2.5rem;
+        color: #fff;
+        text-shadow: 1px 1px 4px #000, 0 0 8px #000;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+
+    .card-box {
+        background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+        border: 1px solid #000;
+        color: #fff;
+        box-shadow: 0px 0px 15px rgba(153, 153, 153, 0.1);
+        border-radius: 10px;
+        width: 100%;
+        max-width: 400px;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-primary {
+        background: #007bff;
+        border: 1px solid #007bff;
+        color: white;
+        font-weight: bold;
+        padding: 0.8rem;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        border-radius: 5px;
+    }
+
+    .btn-primary:hover {
+        background: #0056b3;
+        border-color: #0056b3;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary:active {
+        background: #003d80;
+        transform: scale(0.97);
+    }
+
+    @media (max-width: 768px) {
+        #title {
+            font-size: 2rem;
+        }
+
+        .card-box {
+            max-width: 90%;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="title">Welcome to Dashboard Github</div>
+
+    <div class="card-box">
+		<a href="https://pikachu566.github.io/my-personal-website/" class="btn-primary" target="_blank">Biodata</a>
+		<a href="https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/" class="btn-primary" target="_blank">Pakej PC</a>
+		<a href="https://pikachu566.github.io/kerja/" class="btn-primary" target="_blank">Carculate</a>
+		<a href="https://pikachu566.github.io/Penyelenggaraan-Website/" class="btn-primary" target="_blank">Website Maintenance</a>
+		<a href="https://pikachu566.github.io/pc/" class="btn-primary" target="_blank">PC Item Purchase</a>
+		<a href="https://pikachu566.github.io/untuk-dia/" class="btn-primary" target="_blank">Puisi</a>
+		<a href="https://pikachu566.github.io/artificial-intelligence/" class="btn-primary" target="_blank">Cerita AI</a>
+		<a href="https://pikachu566.github.io/Yuna28/" class="btn-primary" target="_blank">Cerita AI 2</a>
+		<a href="https://pikachu566.github.io/you-like-me/" class="btn-primary" target="_blank">Suka Aku?</a>
+		<a href="https://pikachu566.github.io/happy-birthday/" class="btn-primary" target="_blank">happy birthday</a>
+      <!-- Tambah button baru? Letak sini je! -->
+    </div>
+  </div>
+</body>
+</html>
