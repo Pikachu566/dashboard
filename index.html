@@ -1,85 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Dashboard Github</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    :root {
+      --primary-color: #007bff;
+      --primary-hover: #0056b3;
+      --bg-dark: #1e1e1e;
+      --text-light: #fff;
+      --card-bg: #2c2c2c;
+      --btn-radius: 12px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        background-color: #222;
-        color: #fff;
-        font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100%;
     }
 
     .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        padding: 20px;
-        box-sizing: border-box;
-        text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+      gap: 30px;
     }
 
     #title {
-        font-size: 2.5rem;
-        color: #fff;
-        text-shadow: 1px 1px 4px #000, 0 0 8px #000;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 30px;
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      color: var(--text-light);
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+      letter-spacing: 1.5px;
     }
 
     .card-box {
-        background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-        border: 1px solid #000;
-        color: #fff;
-        box-shadow: 0px 0px 15px rgba(153, 153, 153, 0.1);
-        border-radius: 10px;
-        width: 100%;
-        max-width: 400px;
-        padding: 30px 20px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+      background: var(--card-bg);
+      padding: 25px 20px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      width: 100%;
+      max-width: 450px;
+      transition: all 0.3s ease-in-out;
     }
 
     .btn-primary {
-        background: #007bff;
-        border: 1px solid #007bff;
-        color: white;
-        font-weight: bold;
-        padding: 0.8rem;
-        text-decoration: none;
-        text-align: center;
-        transition: all 0.3s ease-in-out;
-        border-radius: 5px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--primary-color);
+      color: var(--text-light);
+      text-decoration: none;
+      padding: 14px;
+      border-radius: var(--btn-radius);
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
     }
 
     .btn-primary:hover {
-        background: #0056b3;
-        border-color: #0056b3;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background: var(--primary-hover);
+      transform: translateY(-2px);
     }
 
     .btn-primary:active {
-        background: #003d80;
-        transform: scale(0.97);
+      transform: scale(0.97);
     }
 
-    @media (max-width: 768px) {
-        #title {
-            font-size: 2rem;
-        }
+    @media (min-width: 768px) {
+      .card-box {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
 
-        .card-box {
-            max-width: 90%;
-        }
+      #title {
+        font-size: 3.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .card-box {
+        max-width: 600px;
+      }
     }
   </style>
 </head>
@@ -88,17 +105,16 @@
     <div id="title">Welcome to Dashboard Github</div>
 
     <div class="card-box">
-		<a href="https://pikachu566.github.io/my-personal-website/" class="btn-primary" target="_blank">Biodata</a>
-		<a href="https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/" class="btn-primary" target="_blank">Pakej PC</a>
-		<a href="https://pikachu566.github.io/kerja/" class="btn-primary" target="_blank">Carculate</a>
-		<a href="https://pikachu566.github.io/Penyelenggaraan-Website/" class="btn-primary" target="_blank">Website Maintenance</a>
-		<a href="https://pikachu566.github.io/pc/" class="btn-primary" target="_blank">PC Item Purchase</a>
-		<a href="https://pikachu566.github.io/untuk-dia/" class="btn-primary" target="_blank">Puisi</a>
-		<a href="https://pikachu566.github.io/artificial-intelligence/" class="btn-primary" target="_blank">Cerita AI</a>
-		<a href="https://pikachu566.github.io/Yuna28/" class="btn-primary" target="_blank">Cerita AI 2</a>
-		<a href="https://pikachu566.github.io/you-like-me/" class="btn-primary" target="_blank">Suka Aku?</a>
-		<a href="https://pikachu566.github.io/happy-birthday/" class="btn-primary" target="_blank">happy birthday</a>
-      <!-- Tambah button baru? Letak sini je! -->
+      <a href="https://pikachu566.github.io/my-personal-website/" class="btn-primary" target="_blank">Biodata</a>
+      <a href="https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/" class="btn-primary" target="_blank">Pakej PC</a>
+      <a href="https://pikachu566.github.io/kerja/" class="btn-primary" target="_blank">Carculate</a>
+      <a href="https://pikachu566.github.io/Penyelenggaraan-Website/" class="btn-primary" target="_blank">Website Maintenance</a>
+      <a href="https://pikachu566.github.io/pc/" class="btn-primary" target="_blank">PC Item Purchase</a>
+      <a href="https://pikachu566.github.io/untuk-dia/" class="btn-primary" target="_blank">Puisi</a>
+      <a href="https://pikachu566.github.io/artificial-intelligence/" class="btn-primary" target="_blank">Cerita AI</a>
+      <a href="https://pikachu566.github.io/Yuna28/" class="btn-primary" target="_blank">Cerita AI 2</a>
+      <a href="https://pikachu566.github.io/you-like-me/" class="btn-primary" target="_blank">Suka Aku?</a>
+      <a href="https://pikachu566.github.io/happy-birthday/" class="btn-primary" target="_blank">Happy Birthday</a>
     </div>
   </div>
 </body>
