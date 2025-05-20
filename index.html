@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     :root {
-      --primary-color: #007bff;
-      --primary-hover: #0056b3;
       --bg-dark: #1e1e1e;
       --text-light: #fff;
       --card-bg: #2c2c2c;
@@ -29,95 +27,116 @@
     }
 
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       padding: 40px 20px;
-      min-height: 100vh;
-      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
     }
 
     #title {
-      font-size: 3rem;
+      font-size: 2.8rem;
       font-weight: bold;
       text-align: center;
+      margin-bottom: 40px;
       color: var(--text-light);
       text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
-      letter-spacing: 1.5px;
     }
 
-    .card-box {
-      background: var(--card-bg);
-      padding: 25px 20px;
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: 1fr;
+    .section-title {
+      font-size: 1.5rem;
+      margin: 30px 0 10px;
+      border-bottom: 2px solid #555;
+      padding-bottom: 5px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
       gap: 15px;
-      width: 100%;
-      max-width: 450px;
-      transition: all 0.3s ease-in-out;
+      margin-bottom: 20px;
     }
 
-    .btn-primary {
-      display: block;
-      width: 100%;
+    .btn {
+      flex: 1 1 220px;
       text-align: center;
-      background: var(--primary-color);
-      color: var(--text-light);
-      text-decoration: none;
       padding: 14px;
       border-radius: var(--btn-radius);
+      text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s, transform 0.2s;
+      color: white;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, opacity 0.3s;
     }
 
-    .btn-primary:hover {
-      background: var(--primary-hover);
+    .btn:hover {
+      opacity: 0.9;
       transform: translateY(-2px);
     }
 
-    .btn-primary:active {
-      transform: scale(0.97);
-    }
+    /* Color variations */
+    .btn-blue { background-color: #007bff; }
+    .btn-green { background-color: #28a745; }
+    .btn-red { background-color: #dc3545; }
+    .btn-orange { background-color: #fd7e14; }
+    .btn-purple { background-color: #6f42c1; }
+    .btn-pink { background-color: #e83e8c; }
+    .btn-teal { background-color: #20c997; }
+    .btn-yellow { background-color: #ffc107; color: #000; }
 
-    @media (min-width: 768px) {
-      .card-box {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
+    @media (max-width: 768px) {
+      .btn {
+        flex: 1 1 100%;
       }
 
       #title {
-        font-size: 3.5rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .card-box {
-        max-width: 600px;
+        font-size: 2.2rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div id="title">Welcome to Dashboard Github</div>
+    <div id="title">Welcome to my website🤍</div>
+	
 
-    <div class="card-box">
-      <a href="https://pikachu566.github.io/aku/" class="btn-primary" target="_blank">Intro</a>
-      <a href="https://pikachu566.github.io/my-personal-website/" class="btn-primary" target="_blank">Biodata</a>
-      <a href="https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/" class="btn-primary" target="_blank">Pakej PC</a>
-      <a href="https://pikachu566.github.io/kerja/" class="btn-primary" target="_blank">Carculate</a>
-      <a href="https://pikachu566.github.io/Penyelenggaraan-Website/" class="btn-primary" target="_blank">Website Maintenance</a>
-      <a href="https://pikachu566.github.io/pc/" class="btn-primary" target="_blank">PC Item Purchase</a>
-      <a href="https://pikachu566.github.io/untuk-dia/" class="btn-primary" target="_blank">Puisi</a>
-      <a href="https://pikachu566.github.io/artificial-intelligence/" class="btn-primary" target="_blank">Cerita AI</a>
-      <a href="https://pikachu566.github.io/Yuna28/" class="btn-primary" target="_blank">Cerita AI 2</a>
-      <a href="https://pikachu566.github.io/you-like-me/" class="btn-primary" target="_blank">Suka Aku?</a>
-      <a href="https://pikachu566.github.io/happy-birthday/" class="btn-primary" target="_blank">Happy Birthday</a>
-      <a href="https://pikachu566.github.io/keyboard/" class="btn-primary" target="_blank">Typing Game</a>
+    <!-- Blog Section -->
+    <div class="section-title">Blog</div>
+    <div class="button-group">
+	  <a href="https://pikachu566.github.io/my-personal-website/" class="btn btn-green" target="_blank">BIODATA</a>
+      <a href="https://pikachu566.github.io/aku/" class="btn btn-blue" target="_blank">BLOG INTRO</a>
+      <a href="https://pikachu566.github.io/untuk-dia/" class="btn btn-teal" target="_blank">BLOG PUISI</a>
+	        <a href="https://pikachu566.github.io/buybitcoin/" class="btn btn-orange" target="_blank">BLOG BITCOIN</a>
     </div>
+
+    <!-- Systems Section -->
+    <div class="section-title">Systems</div>
+    <div class="button-group">
+      <a href="https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/" class="btn btn-red" target="_blank">PAKEJ PC WEBSITE SYSTEMS</a>
+      <a href="https://pikachu566.github.io/kerja/" class="btn btn-purple" target="_blank">CARCULATE SYSTEMS</a>
+      <a href="https://pikachu566.github.io/Penyelenggaraan-Website/" class="btn btn-pink" target="_blank">MAINTENANCE SYSTEMS</a>
+      <a href="https://pikachu566.github.io/pc/" class="btn btn-orange" target="_blank">PC ITEM PURCHASE SYSTEMS</a>
+    </div>
+
+    <!-- Cerita AI Section -->
+    <div class="section-title">Cerita AI</div>
+    <div class="button-group">
+      <a href="https://pikachu566.github.io/artificial-intelligence/" class="btn btn-purple" target="_blank">BLOG CERITA AI</a>
+      <a href="https://pikachu566.github.io/Yuna28/" class="btn btn-pink" target="_blank">BLOG CERITA AI 2</a>
+    </div>
+
+    <!-- Game Section -->
+    <div class="section-title">Game</div>
+    <div class="button-group">
+      <a href="https://pikachu566.github.io/keyboard/" class="btn btn-green" target="_blank">KEYBOARD GAME</a>
+    </div>
+	
+	    <!-- like me Section -->
+    <div class="section-title">Jangan Tekan Takda Apa</div>
+    <div class="button-group">
+      <a href="https://pikachu566.github.io/you-like-me/" class="btn btn-red" target="_blank">SUKA AKU?</a>
+	  <a href="https://pikachu566.github.io/happy-birthday/" class="btn btn-yellow" target="_blank">HAPPY BIRTHDAY</a>
+    </div>
+
+	
   </div>
 </body>
 </html>
