@@ -6,145 +6,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     :root {
-      --bg-dark: #1e1e1e;
-      --text-light: #fff;
-      --card-bg: #2c2c2c;
-      --btn-radius: 12px;
-      --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      --bg-1:#0b1020;
+      --bg-2:#141a33;
+      --txt:#e8ecf1;
+      --muted:#aab5c5;
+      --brand:#6ee7ff;
+      --brand-2:#7c6dff;
+      --card:#0f1630cc;
+      --shadow:0 10px 25px rgba(0,0,0,.35), 0 2px 8px rgba(0,0,0,.25);
     }
 
-    * {
-      box-sizing: border-box;
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,sans-serif;
+      background:radial-gradient(1000px 700px at 10% 10%, rgba(124,109,255,.25), transparent 60%),
+                 radial-gradient(800px 600px at 90% 20%, rgba(110,231,255,.18), transparent 60%),
+                 linear-gradient(180deg, var(--bg-1), var(--bg-2));
+      background-attachment:fixed;
+      color:var(--txt);
+      min-height:100vh;
     }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg-dark);
-      color: var(--text-light);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      min-height: 100%;
+    .container{max-width:1000px;margin:auto;padding:40px 20px}
+
+    #title{
+      font-size:clamp(32px,5vw,44px);
+      font-weight:800;
+      text-align:center;
+      margin-bottom:40px;
+      text-shadow:0 0 18px rgba(124,109,255,.25);
     }
 
-    .container {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+    .section-title{
+      font-size:1.4rem;
+      margin:30px 0 15px;
+      padding-bottom:6px;
+      border-bottom:2px solid rgba(255,255,255,.08);
+      letter-spacing:.5px;
+      color:var(--brand);
     }
 
-    #title {
-      font-size: 2.8rem;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 40px;
-      color: var(--text-light);
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    .button-group{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+      gap:16px;
+      margin-bottom:30px;
     }
 
-    .section-title {
-      font-size: 1.5rem;
-      margin: 30px 0 10px;
-      border-bottom: 2px solid #555;
-      padding-bottom: 5px;
+    .btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px;
+      border-radius:14px;
+      font-weight:600;
+      text-decoration:none;
+      color:#0b1020;
+      background:linear-gradient(135deg,var(--brand),var(--brand-2));
+      box-shadow:var(--shadow);
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(124,109,255,.45)}
+    .btn:active{transform:translateY(0)}
+
+    footer{
+      margin-top:50px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
     }
 
-    .button-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      flex: 1 1 220px;
-      text-align: center;
-      padding: 14px;
-      border-radius: var(--btn-radius);
-      text-decoration: none;
-      font-weight: bold;
-      color: white;
-      box-shadow: var(--shadow);
-      transition: transform 0.2s, opacity 0.3s;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-      transform: translateY(-2px);
-    }
-
-    /* Color variations */
-    .btn-blue { background-color: #007bff; }
-    .btn-green { background-color: #28a745; }
-    .btn-red { background-color: #dc3545; }
-    .btn-orange { background-color: #fd7e14; }
-    .btn-purple { background-color: #6f42c1; }
-    .btn-pink { background-color: #e83e8c; }
-    .btn-teal { background-color: #20c997; }
-    .btn-yellow { background-color: #ffc107; color: #000; }
-
-    @media (max-width: 768px) {
-      .btn {
-        flex: 1 1 100%;
-      }
-
-      #title {
-        font-size: 2.2rem;
-      }
+    @media(max-width:600px){
+      #title{font-size:28px}
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div id="title">Welcome to my website🤍</div>
-	
-    <!-- Tools -->
+    <div id="title">🤍 Welcome to my website 🤍</div>
+
     <div class="section-title">Tools</div>
     <div class="button-group">
-      <a href="https://pikachu566.github.io/Tools/" class="btn btn-red" target="_blank">TOOLS DOWNLOAD</a>
+      <a href="https://pikachu566.github.io/Tools/" class="btn" target="_blank">TOOLS DOWNLOAD</a>
     </div>
-	  
-    <!-- Blog Section -->
+
     <div class="section-title">Blog</div>
     <div class="button-group">
-	<a href="https://pikachu566.github.io/Aisyah/" class="btn btn-pink" target="_blank">BLOG 404 ERROR</a>
-	<a href="https://pikachu566.github.io/my-personal-website/" class="btn btn-green" target="_blank">BIODATA</a>
-      <a href="https://pikachu566.github.io/aku/" class="btn btn-blue" target="_blank">BLOG INTRO</a>
-      <a href="https://pikachu566.github.io/untuk-dia/" class="btn btn-teal" target="_blank">BLOG PUISI</a>
-	        <a href="https://pikachu566.github.io/buybitcoin/" class="btn btn-orange" target="_blank">BLOG BITCOIN</a>
+      <a href="https://pikachu566.github.io/Aisyah/" class="btn" target="_blank">BLOG 404 ERROR</a>
+      <a href="https://pikachu566.github.io/my-personal-website/" class="btn" target="_blank">BIODATA</a>
+      <a href="https://pikachu566.github.io/aku/" class="btn" target="_blank">BLOG INTRO</a>
+      <a href="https://pikachu566.github.io/untuk-dia/" class="btn" target="_blank">BLOG PUISI</a>
+      <a href="https://pikachu566.github.io/buybitcoin/" class="btn" target="_blank">BLOG BITCOIN</a>
     </div>
 
-    <!-- Systems Section -->
     <div class="section-title">Systems</div>
     <div class="button-group">
-      <a href="https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/" class="btn btn-red" target="_blank">PAKEJ PC WEBSITE SYSTEMS</a>
-      <a href="https://pikachu566.github.io/kerja/" class="btn btn-purple" target="_blank">CARCULATE SYSTEMS</a>
-      <a href="https://pikachu566.github.io/Penyelenggaraan-Website/" class="btn btn-pink" target="_blank">MAINTENANCE SYSTEMS</a>
-      <a href="https://pikachu566.github.io/pc/" class="btn btn-orange" target="_blank">PC ITEM PURCHASE SYSTEMS</a>
+      <a href="https://pikachu566.github.io/Official_Website-FPS-FIKTECH-PC-SOLUTION/" class="btn" target="_blank">PAKEJ PC WEBSITE SYSTEMS</a>
+      <a href="https://pikachu566.github.io/kerja/" class="btn" target="_blank">CARCULATE SYSTEMS</a>
+      <a href="https://pikachu566.github.io/Penyelenggaraan-Website/" class="btn" target="_blank">MAINTENANCE SYSTEMS</a>
+      <a href="https://pikachu566.github.io/pc/" class="btn" target="_blank">PC ITEM PURCHASE SYSTEMS</a>
     </div>
 
-    <!-- Cerita AI Section -->
     <div class="section-title">Cerita AI</div>
     <div class="button-group">
-      <a href="https://pikachu566.github.io/artificial-intelligence/" class="btn btn-purple" target="_blank">BLOG CERITA AI</a>
-      <a href="https://pikachu566.github.io/Yuna28/" class="btn btn-pink" target="_blank">BLOG CERITA AI 2</a>
+      <a href="https://pikachu566.github.io/artificial-intelligence/" class="btn" target="_blank">BLOG CERITA AI</a>
+      <a href="https://pikachu566.github.io/Yuna28/" class="btn" target="_blank">BLOG CERITA AI 2</a>
     </div>
 
-    <!-- Game Section -->
     <div class="section-title">Game</div>
     <div class="button-group">
-      <a href="https://pikachu566.github.io/keyboard/" class="btn btn-green" target="_blank">KEYBOARD GAME</a>
-	<a href="https://pikachu566.github.io/blockchain/" class="btn btn-green" target="_blank">BLOCKCHAIN SIMULATOR</a>
-    </div>
-	
-	    <!-- like me Section -->
-    <div class="section-title">Jangan Tekan Takda Apa</div>
-    <div class="button-group">
-      <a href="https://pikachu566.github.io/you-like-me/" class="btn btn-red" target="_blank">SUKA AKU?</a>
-	  <a href="https://pikachu566.github.io/happy-birthday/" class="btn btn-yellow" target="_blank">HAPPY BIRTHDAY</a>
+      <a href="https://pikachu566.github.io/keyboard/" class="btn" target="_blank">KEYBOARD GAME</a>
+      <a href="https://pikachu566.github.io/blockchain/" class="btn" target="_blank">BLOCKCHAIN SIMULATOR</a>
     </div>
 
-	
+    <footer>✨ Fiq ✨</footer>
   </div>
 </body>
 </html>
-
